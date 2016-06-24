@@ -38,28 +38,21 @@ class Deck {
                 internalDeck.append(card)
             }
         }
+    }
         // function -> return value
-        func drawOne() -> Card? {
-            let randomIndex: Int = Int(arc4random_uniform(UInt32(internalDeck.count)))
-            return internalDeck.removeAtIndex(randomIndex)
-        }
+    func drawOne() -> Card? {
+        let randomIndex: Int = Int(arc4random_uniform(UInt32(internalDeck.count)))
+        return internalDeck.removeAtIndex(randomIndex)
     }
 }
 
-let deck = Deck()
-let playerCard = deck.drawOne()!
-let computerCard = deck.drawOne()!
 
-compareCards(playerCard, computerCard)
-
-let winningPlayer = compareCards(playerCard, computerCard: computerCard)
 
 enum Player {
     case human
     case computer
 }
 
-// return true if player won, false if computer won
 func compareCards(playerCard: Card, computerCard: Card) -> Player {
     if playerCard.rank.rawValue > computerCard.rank.rawValue {
         //if player card wins
@@ -80,20 +73,27 @@ func compareCards(playerCard: Card, computerCard: Card) -> Player {
         // computer card wins
         return Player.computer
     }
-    
-    }
 }
+
 
 func printEndGameMessage(winningPlayer: Player, winningCard: Card)
 {
     var winningPlayerString: String
-    if winning Player == Player.human{
+    if winningPlayer == Player.human {
         winningPlayerString = "player"
-        
     }
     else {
         winningPlayerString = "computer"
     }
 
+ print("The \(winningPlayerString) won with \(winningCard) !")
 }
- print("The \(winningplayer) won with \(winningcard) !")
+
+
+let deck = Deck()
+let playerCard = deck.drawOne()!
+let computerCard = deck.drawOne()!
+
+//compareCards(playerCard, computerCard)
+
+let winningPlayer = compareCards(playerCard, computerCard: computerCard)
