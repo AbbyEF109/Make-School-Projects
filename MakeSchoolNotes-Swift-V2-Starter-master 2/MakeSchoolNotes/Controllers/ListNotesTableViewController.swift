@@ -10,8 +10,21 @@ import UIKit
 
 class ListNotesTableViewController: UITableViewController {
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
   }
-  
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("listNotesTableViewCell", forIndexPath: indexPath)
+        
+        
+        cell.textLabel?.text = "Yay - it's working!"
+        
+        return cell
+    }
 }
