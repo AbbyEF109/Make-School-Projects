@@ -167,7 +167,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="noteContentTV2" destination="V9O-BW-6It" id="V98-GU-5Qe"/>
                         <outlet property="noteContentTextView" destination="V9O-BW-6It" id="BnR-mO-G6a"/>
                         <outlet property="noteTitleTextField" destination="RU4-8d-7dZ" id="tr7-XK-oxs"/>
                     </connections>
