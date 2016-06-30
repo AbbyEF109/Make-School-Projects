@@ -82,30 +82,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="V9O-BW-6It">
-                                <rect key="frame" x="20" y="114" width="560" height="478"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <edgeInsets key="layoutMargins" top="15" left="15" bottom="15" right="15"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RU4-8d-7dZ">
                                 <rect key="frame" x="20" y="64" width="560" height="30"/>
                                 <edgeInsets key="layoutMargins" top="15" left="15" bottom="15" right="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="V9O-BW-6It">
+                                <rect key="frame" x="20" y="102" width="560" height="490"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <edgeInsets key="layoutMargins" top="15" left="15" bottom="15" right="15"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RU4-8d-7dZ" firstAttribute="leading" secondItem="oD7-Nw-xWT" secondAttribute="leadingMargin" id="5Dv-7S-WEL"/>
-                            <constraint firstItem="V9O-BW-6It" firstAttribute="leading" secondItem="RU4-8d-7dZ" secondAttribute="leading" id="Et7-YI-pK8"/>
-                            <constraint firstItem="V9O-BW-6It" firstAttribute="trailing" secondItem="RU4-8d-7dZ" secondAttribute="trailing" id="Smg-fo-zeD"/>
-                            <constraint firstItem="V9O-BW-6It" firstAttribute="top" secondItem="RU4-8d-7dZ" secondAttribute="bottom" constant="20" id="Y3L-NI-nHB"/>
+                            <constraint firstItem="b4F-DO-YIe" firstAttribute="top" secondItem="V9O-BW-6It" secondAttribute="bottom" constant="8" symbolic="YES" id="GLi-QP-fnA"/>
+                            <constraint firstItem="V9O-BW-6It" firstAttribute="top" secondItem="RU4-8d-7dZ" secondAttribute="bottom" constant="8" symbolic="YES" id="VbY-Ws-BYA"/>
                             <constraint firstItem="RU4-8d-7dZ" firstAttribute="top" secondItem="zdR-HS-jXY" secondAttribute="bottom" id="ZdH-9U-WrE"/>
-                            <constraint firstItem="b4F-DO-YIe" firstAttribute="top" secondItem="V9O-BW-6It" secondAttribute="bottom" constant="8" id="dzY-a8-gVZ"/>
+                            <constraint firstItem="V9O-BW-6It" firstAttribute="leading" secondItem="RU4-8d-7dZ" secondAttribute="leading" id="bbb-lX-bWG"/>
                             <constraint firstItem="V9O-BW-6It" firstAttribute="top" secondItem="RU4-8d-7dZ" secondAttribute="bottom" constant="40" id="i1k-Fa-DCo"/>
+                            <constraint firstItem="V9O-BW-6It" firstAttribute="trailing" secondItem="RU4-8d-7dZ" secondAttribute="trailing" id="p5y-kN-HzM"/>
                             <constraint firstItem="RU4-8d-7dZ" firstAttribute="trailing" secondItem="oD7-Nw-xWT" secondAttribute="trailingMargin" id="xj1-iA-lro"/>
                         </constraints>
                         <variation key="default">
@@ -126,11 +126,15 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="noteContentTextView" destination="V9O-BW-6It" id="BnR-mO-G6a"/>
+                        <outlet property="noteTitleTextField" destination="RU4-8d-7dZ" id="tr7-XK-oxs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBj-Eo-z0w" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ZSU-zA-vsd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2499" y="161"/>
+            <point key="canvasLocation" x="2503" y="161"/>
         </scene>
         <!--Notes-->
         <scene sceneID="DiA-n5-bvc">
