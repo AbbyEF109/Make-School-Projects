@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		28D74E361D255E8200937A14 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D74E351D255E8200937A14 /* Notes.swift */; };
+		28D74E361D255E8200937A14 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D74E351D255E8200937A14 /* Note.swift */; };
 		28D74E381D256C9800937A14 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D74E371D256C9800937A14 /* RealmHelper.swift */; };
 		2E4A07941C42F3B0007F415F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4A07931C42F3B0007F415F /* AppDelegate.swift */; };
 		2E4A07991C42F3B0007F415F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E4A07971C42F3B0007F415F /* Main.storyboard */; };
@@ -39,7 +39,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		28D74E351D255E8200937A14 /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		28D74E351D255E8200937A14 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		28D74E371D256C9800937A14 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		2E4A07901C42F3B0007F415F /* MakeSchoolNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeSchoolNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E4A07931C42F3B0007F415F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 		2E4A07A71C42F3F2007F415F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				28D74E351D255E8200937A14 /* Notes.swift */,
+				28D74E351D255E8200937A14 /* Note.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -230,7 +230,7 @@
 				2E4A07941C42F3B0007F415F /* AppDelegate.swift in Sources */,
 				28D74E381D256C9800937A14 /* RealmHelper.swift in Sources */,
 				2E4A07A91C42F40B007F415F /* ListNotesTableViewController.swift in Sources */,
-				28D74E361D255E8200937A14 /* Notes.swift in Sources */,
+				28D74E361D255E8200937A14 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

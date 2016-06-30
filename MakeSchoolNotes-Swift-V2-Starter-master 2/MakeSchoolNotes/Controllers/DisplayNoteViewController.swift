@@ -13,7 +13,6 @@ class DisplayNoteViewController: UIViewController {
     
     var note: Note?
     @IBOutlet weak var noteTitleTextField: UITextField!
-    
     @IBOutlet weak var noteContentTextView: UITextView!
     
     override func viewDidLoad() {

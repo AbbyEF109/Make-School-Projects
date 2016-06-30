@@ -4,26 +4,30 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Notes-->
         <scene sceneID="dVN-r5-8ll">
             <objects>
                 <tableViewController id="u2p-Xo-LIX" customClass="ListNotesTableViewController" customModule="MakeSchoolNotes" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="HJp-ZC-yAU">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" sectionHeaderHeight="28" sectionFooterHeight="28" id="HJp-ZC-yAU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.936482755" green="0.99138763259999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listNotesTableViewCell" rowHeight="60" id="e5G-wG-mNh" customClass="ListNotesTableViewCell" customModule="MakeSchoolNotes" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="60"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listNotesTableViewCell" rowHeight="115" id="e5G-wG-mNh" customClass="ListNotesTableViewCell" customModule="MakeSchoolNotes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="115"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e5G-wG-mNh" id="Du3-q9-QAa">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="114"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5X-Ru-SKt">
-                                            <rect key="frame" x="8" y="0.0" width="91" height="21"/>
+                                            <rect key="frame" x="8" y="0.0" width="420" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="91" id="E3c-Ba-nWH"/>
                                                 <constraint firstAttribute="height" constant="21" id="un3-uo-uvw"/>
@@ -31,24 +35,50 @@
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                             <color key="textColor" red="0.1014718689" green="0.61062463280000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="E3c-Ba-nWH"/>
+                                                </mask>
+                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note Modification Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ug4-EU-uLW">
                                             <rect key="frame" x="8" y="30" width="160" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQ3-fR-pLU">
+                                            <rect key="frame" x="8" y="61" width="540" height="17"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="truncatedContent">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.60657340028529305" green="0.64169948687886247" blue="0.69070512820512819" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="13" name="HelveticaNeue-Italic"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="EQ3-fR-pLU" secondAttribute="trailing" constant="44" id="LJy-qf-LEi"/>
                                         <constraint firstItem="h5X-Ru-SKt" firstAttribute="leading" secondItem="Ug4-EU-uLW" secondAttribute="leading" id="P8k-Yx-BqZ"/>
                                         <constraint firstItem="Ug4-EU-uLW" firstAttribute="top" secondItem="h5X-Ru-SKt" secondAttribute="bottom" constant="9" id="TTj-dA-1Lh"/>
+                                        <constraint firstItem="EQ3-fR-pLU" firstAttribute="leading" secondItem="Ug4-EU-uLW" secondAttribute="leading" id="Wkc-n4-SDz"/>
+                                        <constraint firstItem="EQ3-fR-pLU" firstAttribute="top" secondItem="Ug4-EU-uLW" secondAttribute="bottom" constant="13" id="Yu7-07-hRO"/>
                                         <constraint firstItem="h5X-Ru-SKt" firstAttribute="top" secondItem="Du3-q9-QAa" secondAttribute="top" id="ghP-2N-H7m"/>
+                                        <constraint firstItem="h5X-Ru-SKt" firstAttribute="width" secondItem="Du3-q9-QAa" secondAttribute="width" multiplier="0.7" id="j8A-yw-coB"/>
                                         <constraint firstItem="h5X-Ru-SKt" firstAttribute="leading" secondItem="Du3-q9-QAa" secondAttribute="leadingMargin" id="sHa-m2-Mh0"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <outlet property="noteModificationTimeLabel" destination="Ug4-EU-uLW" id="d1W-Lu-QFr"/>
+                                    <outlet property="noteModificationTimeLabel" destination="Ug4-EU-uLW" id="kYd-2R-Nc3"/>
                                     <outlet property="noteTitleLabel" destination="h5X-Ru-SKt" id="dCv-Ha-yU7"/>
+                                    <outlet property="truncatedContent" destination="EQ3-fR-pLU" id="End-cS-Fay"/>
                                     <segue destination="ZnM-Ik-ggY" kind="show" identifier="displayNote" id="neM-s8-t44"/>
                                 </connections>
                             </tableViewCell>
@@ -70,7 +100,7 @@
             </objects>
             <point key="canvasLocation" x="1701" y="161"/>
         </scene>
-        <!--Title-->
+        <!--Notes-->
         <scene sceneID="Sof-Ql-lN3">
             <objects>
                 <viewController id="ZnM-Ik-ggY" customClass="DisplayNoteViewController" customModule="MakeSchoolNotes" customModuleProvider="target" sceneMemberID="viewController">
@@ -82,18 +112,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RU4-8d-7dZ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RU4-8d-7dZ">
                                 <rect key="frame" x="20" y="64" width="560" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <edgeInsets key="layoutMargins" top="15" left="15" bottom="15" right="15"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.1014718689" green="0.61062463280000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="V9O-BW-6It">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V9O-BW-6It">
                                 <rect key="frame" x="20" y="102" width="560" height="490"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0017286193650000001" green="0.0092925344820000005" blue="0.014029777490000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <edgeInsets key="layoutMargins" top="15" left="15" bottom="15" right="15"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="GujaratiSangamMN"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -114,7 +154,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="044-hH-Xp7">
+                    <navigationItem key="navigationItem" title="Notes" id="044-hH-Xp7">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="kZn-qm-8c8">
                             <connections>
                                 <segue destination="ZSU-zA-vsd" kind="unwind" identifier="Cancel" unwindAction="unwindToListNotesViewController:" id="8bW-Mu-9nY"/>
@@ -127,6 +167,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="noteContentTV2" destination="V9O-BW-6It" id="V98-GU-5Qe"/>
                         <outlet property="noteContentTextView" destination="V9O-BW-6It" id="BnR-mO-G6a"/>
                         <outlet property="noteTitleTextField" destination="RU4-8d-7dZ" id="tr7-XK-oxs"/>
                     </connections>
@@ -134,7 +175,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBj-Eo-z0w" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ZSU-zA-vsd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2503" y="161"/>
+            <point key="canvasLocation" x="2479" y="161"/>
         </scene>
         <!--Notes-->
         <scene sceneID="DiA-n5-bvc">

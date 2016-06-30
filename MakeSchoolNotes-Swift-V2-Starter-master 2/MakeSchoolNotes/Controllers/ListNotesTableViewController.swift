@@ -41,6 +41,9 @@ class ListNotesTableViewController: UITableViewController {
         // 4
         cell.noteModificationTimeLabel.text = note.modificationTime.convertToString()
         
+        //calls truncated version of note
+        cell.truncatedContent.text = note.content 
+        
         return cell
     }
     
