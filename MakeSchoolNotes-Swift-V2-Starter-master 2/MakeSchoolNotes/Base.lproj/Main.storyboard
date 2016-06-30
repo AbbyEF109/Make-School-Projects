@@ -22,8 +22,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Note Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5X-Ru-SKt">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5X-Ru-SKt">
                                             <rect key="frame" x="8" y="0.0" width="91" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="91" id="E3c-Ba-nWH"/>
+                                                <constraint firstAttribute="height" constant="21" id="un3-uo-uvw"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                             <color key="textColor" red="0.1014718689" green="0.61062463280000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -36,10 +40,10 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="h5X-Ru-SKt" firstAttribute="leading" secondItem="Du3-q9-QAa" secondAttribute="leadingMargin" id="1m0-hn-7Ry"/>
-                                        <constraint firstItem="h5X-Ru-SKt" firstAttribute="leading" secondItem="Ug4-EU-uLW" secondAttribute="leading" id="N0O-Z8-yLd"/>
-                                        <constraint firstItem="h5X-Ru-SKt" firstAttribute="top" secondItem="Du3-q9-QAa" secondAttribute="top" id="mDG-FU-MRw"/>
-                                        <constraint firstItem="Ug4-EU-uLW" firstAttribute="top" secondItem="h5X-Ru-SKt" secondAttribute="bottom" constant="8" symbolic="YES" id="uRc-3U-h7u"/>
+                                        <constraint firstItem="h5X-Ru-SKt" firstAttribute="leading" secondItem="Ug4-EU-uLW" secondAttribute="leading" id="P8k-Yx-BqZ"/>
+                                        <constraint firstItem="Ug4-EU-uLW" firstAttribute="top" secondItem="h5X-Ru-SKt" secondAttribute="bottom" constant="9" id="TTj-dA-1Lh"/>
+                                        <constraint firstItem="h5X-Ru-SKt" firstAttribute="top" secondItem="Du3-q9-QAa" secondAttribute="top" id="ghP-2N-H7m"/>
+                                        <constraint firstItem="h5X-Ru-SKt" firstAttribute="leading" secondItem="Du3-q9-QAa" secondAttribute="leadingMargin" id="sHa-m2-Mh0"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
